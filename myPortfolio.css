@@ -91,6 +91,10 @@ body{
     padding: 110px 0px 0px 150px;
     font-size: 35px;
 }
+.txt{
+    margin: 5px 0;
+    padding: 2px 0;
+}
 .block1 .bullet{
     background: #eeff00;
     margin: 9px;
