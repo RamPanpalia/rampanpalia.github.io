@@ -150,22 +150,41 @@
             <form id="ContactMe" action="" class="ContactMe">
                 <div class="f-ele">
                     <!-- Name: -->
-                    <input id="name" type="text" placeholder="Name">
+                    <input
+                     id="name" 
+                     type="text" 
+                     placeholder="Name" 
+                     pattern="[A-Za-z]{3,25}\s[A-Za-z]*"
+                     title="Username should only contain lowercase or uppercase letters max 25 min 3."
+                    >
                 </div>
                 <div class="f-ele">
                     <!-- Phone Number: -->
-                    <input id="phone" type="text" placeholder="Phone Number">
+                    <input 
+                     id="phone" 
+                     type="text" 
+                     placeholder="Phone Number"
+                     pattern="[1-9][0-9]{9}"
+                     title="Please enter correct phone number with no spaces and proper 10 digits"
+                     >
                 </div>
                 <div class="f-ele">
                     <!-- E-mail ID: -->
-                    <input id="email" type="text" placeholder="E-Mail Id">    
+                    <input
+                     id="email"
+                     type="text"
+                     placeholder="E-Mail Id"
+                     pattern="[a-z0-9]{1,}@[a-z]*.[a-z]{2,}"
+                     title="Please enter correct email id"
+                     >    
                 </div>
                 <div class="f-ele msg">
                     <!-- Message: -->
                     <!-- <input type="text" placeholder="Message"> -->
-                    <textarea id="message" type="text" placeholder="Message">Write Here!</textarea>
+                    <textarea id="message" type="text" placeholder="Message" pattern="[\w]{10,}" title="It worked">Write Here!</textarea>
                 </div>
                 <button class="msg-button" type="submit" >SUBMIT</button>
+            </form>on" type="submit" >SUBMIT</button>
             </form>
             <br><br>
             <p>Or share it here!</p>
