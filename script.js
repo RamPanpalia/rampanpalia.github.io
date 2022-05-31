@@ -23,7 +23,7 @@ const contactFormDB=firebase.database().ref("ContactMe")
  */
 
 document.getElementById("ContactMe").addEventListener("submit",submitForm);
-console.log("it came till here")
+// console.log("it came till here")
 
 function submitForm(e){
     e.preventDefault();
@@ -33,6 +33,7 @@ function submitForm(e){
     var message=getElementVal("message");
     console.log(name,email,phone,message)
     saveMessages(name,email,phone,message)
+    alert("Your message recieved!")
 }
 const saveMessages=(name,email,phone,message)=>{
     var newContactForm = contactFormDB.push();
