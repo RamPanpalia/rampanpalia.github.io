@@ -226,6 +226,55 @@ body{
 li{
     font-weight: 700;
 }
+.ContactMe input,textarea{
+    background: #343F4F;
+    color: #fff;
+    border: none;
+    /* border: 2px solid #6d9fe5; */
+    border: 5px solid #222932;
+    border: 5px solid #778ba4;
+    border-radius: 7px;
+    height: 60px;
+    width: 70%;
+    margin: 20px 0;
+    font-size: 20px;
+    padding: 0 0 0 20px;
+}
+input::placeholder,textarea::placeholder{
+    /* color: #fafeff; */
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 100;
+    vertical-align: bottom;
+}
+/* .ContactMe .msg input::placeholder{
+    position: absolute;
+    top: 10px;
+    text-align: start; 
+} */
+.ContactMe input:focus{
+    outline: none;
+}
+.msg textarea{
+    outline: none;
+}
+.msg textarea{
+    top: 0;
+    height: 100px;
+}
+.msg-button{
+    position: absolute;
+    left: 20%;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 5px;
+    height: 30px;
+    width: 100px;
+}
+
 .credit{
     color: #eeff00;
     display: flex;
