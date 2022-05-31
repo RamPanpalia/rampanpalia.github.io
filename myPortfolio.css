@@ -227,7 +227,9 @@ li{
     font-weight: 700;
 }
 .ContactMe input,textarea{
-    background: #343F4F;
+/*     background: #343F4F; */
+    background-color: -internal-light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    color: #000;
     color: #fff;
     border: none;
     /* border: 2px solid #6d9fe5; */
@@ -242,7 +244,7 @@ li{
 }
 input::placeholder,textarea::placeholder{
     /* color: #fafeff; */
-    color: #fff;
+    color: #000;
     font-size: 20px;
     text-align: left;
     font-weight: 100;
