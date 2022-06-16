@@ -8,6 +8,9 @@
   /* font-family: 'Inconsolata', monospace; */
   font-family: consolas;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a, a:hover, a:focus, a:active {
