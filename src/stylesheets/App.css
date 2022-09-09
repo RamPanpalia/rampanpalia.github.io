@@ -1,0 +1,138 @@
+.App {
+    height: 100vh;
+    width: 100wh;
+    font-family: consolas;
+}
+.top {
+    transform: scale(0.95);
+    box-shadow: 0px 4px 26px 2px rgba(0, 0, 0, 0.25);
+}
+
+.flexMain {
+    display: flex;
+}
+
+.flexone {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+}
+
+.profile-Image {
+    background-color: #764C76;
+    height: 265px;
+    width: 265px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.textEffectBox {
+    text-align: center;
+    margin: 45px;
+}
+.typingText {
+    font-size: 35px;
+}
+
+.staticText {
+    font-size: 25px;
+    font-weight: 600;
+    color: red;
+}
+
+.typingTextCursor {
+    font-size: 38px;
+    color: brown;
+}
+
+.flextwo {
+    flex: 9;
+}
+
+.navBar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 20px 0 15px 0;
+}
+.navBar ul li{
+    font-size: 20px;
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+.navBar ul li:hover{
+    margin: 0;
+    border: 2px solid purple;
+}
+
+.box{
+    margin: 30px 70px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.box-title{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: gray;
+    padding: 20px;
+    font-size: 43px;
+
+}
+.box-matter{
+    padding: 25px;
+    font-size: 22px;
+    line-height: 34px;
+    height: 47vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* social-media */
+.social-media {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 98vw;
+    padding: 20px 0px 20px 0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media svg {
+    transition: .1s;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    /* box-shadow: 0px 20px 40px red !important; */
+}
+
+.facebook:hover {
+    transform: translateY(-10px);
+    fill: rgb(0, 140, 255);
+}
+
+.instagram:hover {
+    transform: translateY(-10px);
+    fill: red;
+}
+
+.twitter:hover {
+    transform: translateY(-10px);
+    fill: rgb(0, 140, 255);
+}
+
+.linked-in:hover {
+    transform: translateY(-10px);
+    fill: rgb(0, 140, 255);
+}
+
+.github:hover {
+    transform: translateY(-10px);
+    fill: black;
+}
