@@ -47,6 +47,16 @@
     color: brown;
 }
 
+.Resume{
+    text-align: center;
+}
+.checkout{
+    color: yellow;
+}
+.resLink{
+    font-size: 32px;
+}
+
 .flextwo {
     flex: 9;
 }
@@ -79,8 +89,7 @@
     border-top-right-radius: 12px;
     background-color: gray;
     padding: 20px;
-    font-size: 43px;
-
+    font-size: 32px;
 }
 .box-matter{
     padding: 25px;
@@ -135,4 +144,9 @@
 .github:hover {
     transform: translateY(-10px);
     fill: black;
+}
+
+.skillsIcons img{
+    height: 95px;
+    margin: 5px 10px;
 }
