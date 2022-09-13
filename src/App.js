@@ -146,7 +146,7 @@ function App() {
   const [navOn, setNavOn] = useState(false);
 
   function navToggle() {
-    if (navOn && window.innerWidth<='960px') {
+    if (navOn && window.innerWidth<=960) {
       document.querySelector('.navBar').style.display = "none";
       setNavOn(false);
     }
