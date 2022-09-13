@@ -171,6 +171,10 @@ function App() {
             <li className='Experience' onClick={setExperience}>Experience</li>
             <li className='Projects' onClick={setProjects}>Projects</li>
             <li className='Contact' onClick={setContact}>Contact Me</li>
+            <div className='Resume Resume2'>
+              <div className='checkout'>checkout</div>
+              <a href='https://rampanpalia.github.io/Resume/' target={'_blank'}><div className='resLink'>MyResume</div></a>
+            </div>
           </ul>
         </div>
         <div className='flexMain'>
