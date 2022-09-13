@@ -1,5 +1,5 @@
 import './stylesheets/App.css';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactTypingEffect from 'react-typing-effect';
 import ComponentTemplate from './components/ComponentTemplate';
 import c from './assets/Skills/c.svg'
@@ -13,21 +13,23 @@ import github from './assets/Skills/github.svg'
 import python from './assets/Skills/python.svg'
 import vsCode from './assets/Skills/vsCode.svg'
 // import vsCode from'./assets/Skills/vsCode.svg'
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Select from 'react-select'
+import { ContactsOutlined } from '@mui/icons-material';
 
 function App() {
-  const [title, setTitle] = useState('Title');
-  const [matter, setMatter] = useState('Matter');
+  const [theme, setTheme] = useState(':root')
+
+  const [title, setTitle] = useState('About Me');
+  const [matter, setMatter] = useState('I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from stratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.');
 
   function setAboutme() {
     setTitle('About Me');
     setMatter(() => {
       return (<>
-        I am passionate about exploring and learning new things.I believe in speak less do more so rest is
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ratione assumenda sit et rerum, impedit dolorem magnam
-        accusantium odio libero nihil eveniet praesentium voluptas consequuntur. Nesciunt repellendus obcaecati cupiditate.
-        Eveniet harum nesciunt quas inventore unde velit dolores esse magnam, voluptate nam alias perferendis exercitationem
-        doloribus qui voluptas quod quia fugit temporibus tenetur necessitatibus laboriosam dolorum dolorem hic repellendus
-        magnam consectetur? Atque reiciendis est itaque temporibus laudantium recusandae!
+        I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from stratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
       </>)
     });
   }
@@ -35,16 +37,16 @@ function App() {
     setTitle('SkillZ and Tools');
     setMatter(() => {
       return (<div className='skillsIcons'>
-        <img src={html} alt="unable to load image!" />
-        <img src={css} alt="unable to load image!" />
-        <img src={JavaScript} alt="unable to load image!" />
-        <img src={flutter} alt="unable to load image!" />
-        <img src={reactJs} alt="unable to load image!" />
-        <img src={c} alt="unable to load image!" />
-        <img src={cpp} alt="unable to load image!" />
-        <img src={vsCode} alt="unable to load image!" />
-        <img src={github} alt="unable to load image!" />
-        <img src={python} alt="unable to load image!" />
+        <img src={html} alt="unable to load image!" title='HTML' />
+        <img src={css} alt="unable to load image!" title='CSS' />
+        <img src={JavaScript} alt="unable to load image!" title='JavaScript' />
+        <img src={flutter} alt="unable to load image!" title='Flutter' />
+        <img src={reactJs} alt="unable to load image!" title='ReactJS' />
+        <img src={c} alt="unable to load image!" title='C' />
+        <img src={cpp} alt="unable to load image!" title='C++' />
+        <img src={vsCode} alt="unable to load image!" title='VS Code' />
+        <img src={github} alt="unable to load image!" title='GitHub' />
+        <img src={python} alt="unable to load image!" title='Python' />
       </div>)
     });
   }
@@ -66,9 +68,9 @@ function App() {
     setMatter(() => {
       return (<>
         <ul>
-          <li>Frontend Web Developer at Computer Science Association, BITS Pilani, 2022-Present</li>
+          <li>Frontend Web Developer at Computer Science Association, BITS Pilani, March 2022-Present</li>
           <p>-As a part of the Frontend team my job is to maintain CSA official website and design website for cultural fests and events.</p>
-          <li>Competitive Programmer at Microsoft Learn Student Ambassador, BITS Pilani, 2022-Present</li>
+          <li>Competitive Programmer at Microsoft Learn Student Ambassador, BITS Pilani, March 2022-Present</li>
           <li>Developer Intern at Foozie.fit, Banglore, Aug 2022-Present</li>
         </ul>
       </>)
@@ -79,7 +81,22 @@ function App() {
     setTitle('Projects');
     setMatter(() => {
       return (<>
-
+        <p>Source Code available on <a href="https://github.com/RamPanpalia"> <u>GitHub</u> </a></p>
+        <p>Click 👇 for preview</p>
+        <ul>
+          <li><a href="https://rampanpalia.github.io/FlipkartClone/" target="_blank">Flipkart Clone</a></li>
+          <li><a href="https://rampanpalia.github.io/therailpark.org-Clone/" target="_blank">therailpark.org website Clone</a></li>
+          <li><a href="https://rampanpalia.github.io/StartBootstrapClone/" target="_blank">StartBootstrab Clone</a></li>
+          <li><a href="https://rampanpalia.github.io/PangramPangramClone/" target="_blank">Pangram Pangram Clone</a></li>
+          <li><a href="https://htmlpreview.github.io/?https://github.com/RamPanpalia/DVM_Task1/blob/main/Task2/index.html" target="_blank">Vendor Performance Form</a></li>
+          <p>-This uses regex pattern validation to verify data and local storage to store the data</p>
+          <li><a href="https://rampanpalia.github.io/Resume-Builder/" target="_blank">Resume Builder</a></li>
+          <p>-Made using simple JavaScript this website allows us to create Resumes</p>
+          <li><a href="https://rampanpalia.github.io/sukart/" target="_blank">SUKart</a></li>
+          <p>-SUKart is a e-commerce website made using react and firebase</p>
+          <li><a href="https://rampanpalia.github.io/RagedFingers/" target="_blank">Raged Fingers</a></li>
+          <p>-Raged Fingers is a typical website built to test you typing speed</p>
+        </ul>
       </>)
     });
   }
@@ -88,6 +105,34 @@ function App() {
     setTitle('Contact Me');
     setMatter(() => {
       return (<>
+        <p>Have something great to work on together or something interesting to share!</p>
+        <p>Fill it here!</p>
+
+        <form id="ContactMe" action="" class="ContactMe">
+          <Box
+            component="form"
+            sx={{
+              '& > :not(style)': { m: 2, minWidth: '25ch' },
+            }}
+            noValidate
+            autoComplete="on"
+            className='formBox'
+          >
+            {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
+            {/* <TextField id="filled-basic" label="Filled" variant="filled" /> */}
+            <TextField id="standard-basic" label="Name" variant="filled" />
+            <TextField id="standard-basic" label="Phone number" variant="filled" />
+            <TextField id="standard-basic" label="Email-ID" variant="filled" />
+            <TextField id="standard-basic" label="Message" variant="filled" multiline minRows={2} />
+            <Button variant="contained" className="msg-button" type="submit">Submit</Button>
+          </Box>
+        </form>
+        <br /><br />
+        <p>Or share it here!</p>
+        <br />
+        <b>Personal E-mail ID:</b> panpaliaram@gmail.com <br />
+        <b>College E-mail ID:</b> f20211363@pilani.bits-pilani.ac.in <br />
+        <b>Phone number:</b> 9834088596 <br />
 
       </>)
     });
@@ -95,8 +140,9 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <div className='top'>
+        <div className='navButton'></div>
         <div className='flexMain'>
           <div className='flexone'>
             <div className='profile-Image'></div>
@@ -122,6 +168,17 @@ function App() {
             <div className='Resume'>
               <div className='checkout'>checkout</div>
               <a href='#'><div className='resLink'>MyResume</div></a>
+            </div>
+            <div className='changeTheme'>
+              <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
+                <option value={':root'}>Light Gray Blue</option>
+                <option value={'theme-01'}>Dark Gray Blue</option>
+                <option value={'theme-02'}>Red</option>
+                <option value={'orange'}>Orange</option>
+                <option value={'black-white'}>Black & white</option>
+                <option value={'ocean-blue'}>Ocean-Blue</option>
+                <option value={'lite'}>Lose all Colors🙃</option>
+              </select>
             </div>
           </div>
           <div className='flextwo'>

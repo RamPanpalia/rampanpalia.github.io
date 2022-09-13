@@ -1,11 +1,103 @@
+:root {
+    --dark-bg: #343f4f;
+    --App-cl: white;
+    --light-bg: #3e4b5e;
+    --highlight: yellow;
+    --title-bg: rgb(248, 248, 115);
+    --title-cl: black;
+    --matter-bg: #e8f6ff;
+    --matter-cl: black;
+}
+
+.theme-01 {
+    --dark-bg: rgb(35, 34, 42);
+    --App-cl: white;
+    --light-bg: #343f4f;
+    --highlight: yellow;
+    --title-bg: rgb(248, 237, 115);
+    --title-cl: black;
+    --matter-bg: #5d6a7e;
+    --matter-cl: white;
+}
+
+.theme-02 {
+    --dark-bg: #4f3434;
+    --App-cl: white;
+    --light-bg: #5e3e3e;
+    --highlight: rgb(255, 0, 0);
+    --title-bg: rgb(248, 115, 115);
+    --title-cl: black;
+    --matter-bg: #ffe8e8;
+    --matter-cl: black;
+}
+
+.orange {
+    --dark-bg: #000000;
+    --App-cl: white;
+    --light-bg: #222222;
+    --highlight: rgb(255, 136, 0);
+    --title-bg: rgb(252, 180, 91);
+    --title-cl: black;
+    --matter-bg: #fff4e8;
+    --matter-cl: black;
+}
+
+.black-white {
+    --dark-bg: #303030;
+    --App-cl: white;
+    --light-bg: #646464;
+    --highlight: rgb(206, 231, 231);
+    --title-bg: rgb(163, 163, 163);
+    --title-cl: black;
+    --matter-bg: #dddddd;
+    --matter-cl: black;
+}
+
+.ocean-blue {
+    --dark-bg: #263838;
+    --App-cl: white;
+    --light-bg: #263838;
+    --highlight: rgb(0, 255, 238);
+    --title-bg: rgb(115, 237, 248);
+    --title-cl: black;
+    --matter-bg: #e8fdff;
+    --matter-cl: black;
+}
+
+.lite {
+    --dark-bg: #ffffff;
+    --App-cl: rgb(0, 0, 0);
+    --light-bg: #ffffff;
+    --highlight: rgb(0, 0, 0);
+    --title-bg: rgb(255, 255, 255);
+    --title-cl: black;
+    --matter-bg: #ffffff;
+    --matter-cl: black;
+
+}
+
 .App {
-    height: 100vh;
+    height: 107vh;
     width: 100wh;
     font-family: consolas;
+    background-color: var(--dark-bg);
+    color: var(--App-cl);
 }
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+}
+
 .top {
     transform: scale(0.95);
     box-shadow: 0px 4px 26px 2px rgba(0, 0, 0, 0.25);
+    padding-bottom: 100px;
+    background-color: var(--light-bg);
 }
 
 .flexMain {
@@ -20,7 +112,9 @@
 }
 
 .profile-Image {
-    background-color: #764C76;
+    background: url('../assets/PP.jpg');
+    background-position: center;
+    background-size: 265px;
     height: 265px;
     width: 265px;
     border-radius: 50%;
@@ -30,8 +124,9 @@
 
 .textEffectBox {
     text-align: center;
-    margin: 45px;
+    margin: 40px 0;
 }
+
 .typingText {
     font-size: 35px;
 }
@@ -39,7 +134,7 @@
 .staticText {
     font-size: 25px;
     font-weight: 600;
-    color: red;
+    color: var(--highlight);
 }
 
 .typingTextCursor {
@@ -47,13 +142,15 @@
     color: brown;
 }
 
-.Resume{
+.Resume {
     text-align: center;
 }
-.checkout{
-    color: yellow;
+
+.checkout {
+    color: var(--highlight);
 }
-.resLink{
+
+.resLink {
     font-size: 32px;
 }
 
@@ -61,51 +158,66 @@
     flex: 9;
 }
 
+.navBar {
+    background-color: var(--dark-bg);
+}
+
 .navBar ul {
     display: flex;
     list-style-type: none;
     margin: 20px 0 15px 0;
 }
-.navBar ul li{
+
+.navBar ul li {
     font-size: 20px;
     padding: 10px;
-    margin: 2px;
     cursor: pointer;
-}
-.navBar ul li:hover{
-    margin: 0;
-    border: 2px solid purple;
+    border: 2px solid transparent;
 }
 
-.box{
+.navBar ul li:hover {
+    border: 2px solid var(--highlight);
+    color: var(--highlight);
+}
+
+.box {
     margin: 30px 70px 30px 10px;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 12px;
 }
-.box-title{
+
+.box-title {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    background-color: gray;
+    background-color: var(--title-bg);
+    color: var(--title-cl);
     padding: 20px;
     font-size: 32px;
+    overflow: hidden;
 }
-.box-matter{
+
+.box-matter {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     padding: 25px;
     font-size: 22px;
     line-height: 34px;
     height: 47vh;
     overflow-y: scroll;
     scrollbar-width: thin;
+    background-color: var(--matter-bg);
+    color: var(--matter-cl);
 }
 
 /* social-media */
 .social-media {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 98vw;
+    right: auto;
+    left: auto;
+    width: 100%;
     padding: 20px 0px 20px 0;
     background: white;
     display: flex;
@@ -146,7 +258,30 @@
     fill: black;
 }
 
-.skillsIcons img{
+.skillsIcons img {
     height: 95px;
     margin: 5px 10px;
+}
+
+.formBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:960px) {
+    .top {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width:960px) {
+    .navBar {
+        /* margin: auto 50px; */
+        font-size: xx-small;
+    }
+
+    .flexMain {
+        flex-direction: column;
+    }
 }
