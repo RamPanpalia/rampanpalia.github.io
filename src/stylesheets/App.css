@@ -205,7 +205,7 @@ a:active {
     padding: 25px;
     font-size: 22px;
     line-height: 34px;
-    height: 47vh;
+    height: 60vh;
     overflow-y: scroll;
     scrollbar-width: thin;
     background-color: var(--matter-bg);
