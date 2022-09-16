@@ -63,6 +63,16 @@
     --matter-bg: #e8fdff;
     --matter-cl: black;
 }
+.limegreen {
+    --dark-bg: #26382c;
+    --App-cl: white;
+    --light-bg: #263829;
+    --highlight: limegreen;
+    --title-bg: rgb(115, 248, 131);
+    --title-cl: black;
+    --matter-bg: #eaffe8;
+    --matter-cl: black;
+}
 
 .lite {
     --dark-bg: #ffffff;
@@ -291,10 +301,13 @@ a:active {
     background-color: black;
     margin: 4px 0;
 }
-.Resume2{
+.Resume2,.changeTheme2{
     display: none;
 }
 @media screen and (max-width:960px) {
+    .flexone{
+        margin: 30px auto;
+    }
     .top {
         transform: scale(1);
     }
@@ -314,7 +327,16 @@ a:active {
     .navBar ul {
         flex-direction: column;
     }
+    .Resume{
+        display: none;
+    }
+    .changeTheme{
+        display: none;
+    }
     .Resume2{
+        display: block;
+    }
+    .changeTheme2{
         display: block;
     }
     .box{

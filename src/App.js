@@ -146,11 +146,11 @@ function App() {
   const [navOn, setNavOn] = useState(false);
 
   function navToggle() {
-    if (navOn && window.innerWidth<=960) {
+    if (navOn && window.innerWidth <= 960) {
       document.querySelector('.navBar').style.display = "none";
       setNavOn(false);
     }
-    else{
+    else {
       document.querySelector('.navBar').style.display = "flex";
       setNavOn(true);
     }
@@ -165,15 +165,27 @@ function App() {
         </div>
         <div className='navBar'>
           <ul>
-            <li className='About' onClick={setAboutme}>About Me</li>
-            <li className='SkillZ' onClick={setSkillZ}>SkillZ</li>
-            <li className='EduAExper' onClick={setEduAExper}>Education and Certifications</li>
-            <li className='Experience' onClick={setExperience}>Experience</li>
-            <li className='Projects' onClick={setProjects}>Projects</li>
-            <li className='Contact' onClick={setContact}>Contact Me</li>
+            <li className='About' onClick={setAboutme}><a href='#componentContainer'>About Me</a></li>
+            <li className='SkillZ' onClick={setSkillZ}><a href='#componentContainer'>SkillZ</a></li>
+            <li className='EduAExper' onClick={setEduAExper}><a href='#componentContainer'>Education and Certifications</a></li>
+            <li className='Experience' onClick={setExperience}><a href='#componentContainer'>Experience</a></li>
+            <li className='Projects' onClick={setProjects}><a href='#componentContainer'>Projects</a></li>
+            <li className='Contact' onClick={setContact}><a href='#componentContainer'>Contact Me</a></li>
             <div className='Resume Resume2'>
               <div className='checkout'>checkout</div>
               <a href='https://rampanpalia.github.io/Resume/' target={'_blank'}><div className='resLink'>MyResume</div></a>
+            </div>
+            <div className='changeTheme changeTheme2'>
+              <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
+                <option value={':root'}>Light Gray Blue</option>
+                <option value={'theme-01'}>Dark Gray Blue</option>
+                <option value={'theme-02'}>Red</option>
+                <option value={'orange'}>Orange</option>
+                <option value={'limegreen'}>LimeGreen</option>
+                <option value={'black-white'}>Black & White</option>
+                <option value={'ocean-blue'}>Ocean-Blue</option>
+                <option value={'lite'}>Lose all Colors🙃</option>
+              </select>
             </div>
           </ul>
         </div>
@@ -209,6 +221,7 @@ function App() {
                 <option value={'theme-01'}>Dark Gray Blue</option>
                 <option value={'theme-02'}>Red</option>
                 <option value={'orange'}>Orange</option>
+                <option value={'limegreen'}>Green</option>
                 <option value={'black-white'}>Black & White</option>
                 <option value={'ocean-blue'}>Ocean-Blue</option>
                 <option value={'lite'}>Lose all Colors🙃</option>
@@ -216,7 +229,7 @@ function App() {
             </div>
           </div>
           <div className='flextwo'>
-            <div className='componentContainer'>
+            <div className='componentContainer' id='componentContainer'>
               <ComponentTemplate
                 title={title}
                 matter={matter}
