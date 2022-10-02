@@ -165,12 +165,12 @@ function App() {
         </div>
         <div className='navBar'>
           <ul>
-            <li className='About' onClick={setAboutme}><a href='#componentContainer'>About Me</a></li>
-            <li className='SkillZ' onClick={setSkillZ}><a href='#componentContainer'>SkillZ</a></li>
-            <li className='EduAExper' onClick={setEduAExper}><a href='#componentContainer'>Education and Certifications</a></li>
-            <li className='Experience' onClick={setExperience}><a href='#componentContainer'>Experience</a></li>
-            <li className='Projects' onClick={setProjects}><a href='#componentContainer'>Projects</a></li>
-            <li className='Contact' onClick={setContact}><a href='#componentContainer'>Contact Me</a></li>
+            <li className='About' onClick={setAboutme}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>About Me</a></li>
+            <li className='SkillZ' onClick={setSkillZ}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>SkillZ</a></li>
+            <li className='EduAExper' onClick={setEduAExper}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Education and Certifications</a></li>
+            <li className='Experience' onClick={setExperience}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Experience</a></li>
+            <li className='Projects' onClick={setProjects}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Projects</a></li>
+            <li className='Contact' onClick={setContact}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Contact Me</a></li>
             <div className='Resume Resume2'>
               <div className='checkout'>checkout</div>
               <a href='https://rampanpalia.github.io/Resume/' target={'_blank'}><div className='resLink'>MyResume</div></a>
