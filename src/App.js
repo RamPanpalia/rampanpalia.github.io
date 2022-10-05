@@ -22,14 +22,14 @@ import { ContactsOutlined } from '@mui/icons-material';
 function App() {
   const [theme, setTheme] = useState(':root')
   const [title, setTitle] = useState('About Me');
-  const [matter, setMatter] = useState('I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from stratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.');
+  const [matter, setMatter] = useState('I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.');
 
   function setAboutme() {
     navToggle();
     setTitle('About Me');
     setMatter(() => {
       return (<>
-        I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from stratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
+        I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
       </>)
     });
   }
@@ -58,8 +58,13 @@ function App() {
     setMatter(() => {
       return (<>
         <ul>
-          <li>BE Hons. Mechanical Engineering,BITS PILANI 2021-2025</li>
-          <li>Data Structures and Algorithms, 2021-Present</li>
+          <li>BE Hons. Mechanical Engineering,BITS PILANI, 2021-2025</li>
+          <li>
+            Data Structures and Algorithms Course By Coding Ninjas, Dec 2021 - Mar 2022
+            <br />
+            -Certificate of Completion (we get it on complete 60% course)
+            -Certificate of Excellence (we get it on complete 90% course)
+          </li>
         </ul>
       </>)
     });
@@ -165,12 +170,12 @@ function App() {
         </div>
         <div className='navBar'>
           <ul>
-            <li className='About' onClick={setAboutme}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>About Me</a></li>
-            <li className='SkillZ' onClick={setSkillZ}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>SkillZ</a></li>
-            <li className='EduAExper' onClick={setEduAExper}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Education and Certifications</a></li>
-            <li className='Experience' onClick={setExperience}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Experience</a></li>
-            <li className='Projects' onClick={setProjects}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Projects</a></li>
-            <li className='Contact' onClick={setContact}><a href={`${navOn && window.innerWidth <= 960?'#componentContainer':'#'}`}>Contact Me</a></li>
+            <li className='About' onClick={setAboutme}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>About Me</a></li>
+            <li className='SkillZ' onClick={setSkillZ}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>SkillZ</a></li>
+            <li className='EduAExper' onClick={setEduAExper}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>Education and Certifications</a></li>
+            <li className='Experience' onClick={setExperience}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>Experience</a></li>
+            <li className='Projects' onClick={setProjects}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>Projects</a></li>
+            <li className='Contact' onClick={setContact}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`}>Contact Me</a></li>
             <div className='Resume Resume2'>
               <div className='checkout'>checkout</div>
               <a href='https://rampanpalia.github.io/Resume/' target={'_blank'}><div className='resLink'>MyResume</div></a>
