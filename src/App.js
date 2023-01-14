@@ -1,5 +1,5 @@
 import './stylesheets/App.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect';
 import ComponentTemplate from './components/ComponentTemplate';
 import c from './assets/Skills/c.svg'
@@ -16,38 +16,48 @@ import vsCode from './assets/Skills/vsCode.svg'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Select from 'react-select'
-import { ContactsOutlined } from '@mui/icons-material';
+// import Select from 'react-select'
+// import { ContactsOutlined } from '@mui/icons-material';
 
 function App() {
   const [theme, setTheme] = useState(':root')
   const [title, setTitle] = useState('About Me');
-  const [matter, setMatter] = useState('I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.');
+  const [matter, setMatter] = useState(`
+  I am passionate about exploring and learning new things. 
+  I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
+  `);
 
   function setAboutme() {
     navToggle();
     setTitle('About Me');
     setMatter(() => {
       return (<>
-        I am passionate about exploring and learning new things. I firmly believe that speaking more than required affects the efficiency of a person negatively. I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
+        I am passionate about exploring and learning new things.
+        {/* I firmly believe that speaking more than required affects the efficiency of a person negatively.  */}
+        I like to implement my learnings by making projects and build things from scratch. I have a strong appetite to gain experience. I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive towards. I am not comfortable with settling, and I am always looking for an opportunity to do better and achieve greatness.
       </>)
     });
   }
   function setSkillZ() {
+    const skillz = [
+      { title: 'HTML', src: html, },
+      { title: 'CSS', src: css, },
+      { title: 'JavaScript', src: JavaScript, },
+      { title: 'Flutter', src: flutter, },
+      { title: 'ReactJS', src: reactJs, },
+      { title: 'C', src: c, },
+      { title: 'C++', src: cpp, },
+      { title: 'VS Code', src: vsCode, },
+      { title: 'GitHub', src: github, },
+      { title: 'Python', src: python, },
+    ]
     navToggle();
     setTitle('SkillZ and Tools');
     setMatter(() => {
       return (<div className='skillsIcons'>
-        <img src={html} alt="unable to load image!" title='HTML' />
-        <img src={css} alt="unable to load image!" title='CSS' />
-        <img src={JavaScript} alt="unable to load image!" title='JavaScript' />
-        <img src={flutter} alt="unable to load image!" title='Flutter' />
-        <img src={reactJs} alt="unable to load image!" title='ReactJS' />
-        <img src={c} alt="unable to load image!" title='C' />
-        <img src={cpp} alt="unable to load image!" title='C++' />
-        <img src={vsCode} alt="unable to load image!" title='VS Code' />
-        <img src={github} alt="unable to load image!" title='GitHub' />
-        <img src={python} alt="unable to load image!" title='Python' />
+        {skillz.map(ele=>
+          <img src={ele.src} alt="unable to load image!" title={ele.title} />  
+        )}
       </div>)
     });
   }
@@ -63,6 +73,7 @@ function App() {
             Data Structures and Algorithms Course By Coding Ninjas, Dec 2021 - Mar 2022
             <br />
             -Certificate of Completion (we get it on complete 60% course)
+            <br />
             -Certificate of Excellence (we get it on complete 90% course)
           </li>
         </ul>
@@ -85,6 +96,54 @@ function App() {
     });
   }
 
+  const proj = [
+    {
+      title: 'Flipkart Clone',
+      link: 'https://rampanpalia.github.io/FlipkartClone/',
+      description: '',
+    },
+    {
+      title: 'therailpark.org Clone',
+      link: 'https://rampanpalia.github.io/therailpark.org-Clone/',
+      description: '',
+    },
+    {
+      title: 'StartBootstrap Clone',
+      link: 'https://rampanpalia.github.io/StartBootstrapClone/',
+      description: '',
+    },
+    {
+      title: 'Pangram Pangram Clone',
+      link: 'https://rampanpalia.github.io/PangramPangramClone/',
+      description: '',
+    },
+    {
+      title: 'Vendor Performance Form',
+      link: 'https://htmlpreview.github.io/?https://github.com/RamPanpalia/DVM_Task1/blob/main/Task2/index.html',
+      description: 'This uses regex pattern validation to verify data and local storage to store the data',
+    },
+    {
+      title: 'Vendor Performance Form',
+      link: 'https://htmlpreview.github.io/?https://github.com/RamPanpalia/DVM_Task1/blob/main/Task2/index.html',
+      description: 'This uses regex pattern validation to verify data and local storage to store the data',
+    },
+    {
+      title: 'Resume Builder',
+      link: 'https://rampanpalia.github.io/Resume-Builder/',
+      description: 'Made using simple JavaScript this website allows us to create Resumes',
+    },
+    {
+      title: 'SUKart',
+      link: 'https://rampanpalia.github.io/sukart/',
+      description: 'SUKart is a e-commerce website made using react and firebase',
+    },
+    {
+      title: 'Raged Fingers',
+      link: 'https://rampanpalia.github.io/RagedFingers/',
+      description: 'Raged Fingers is a typical website built to test you typing speed',
+    },
+
+  ]
   function setProjects() {
     navToggle();
     setTitle('Projects');
@@ -93,18 +152,14 @@ function App() {
         <p>Source Code available on <a href="https://github.com/RamPanpalia"> <u>GitHub</u> </a></p>
         <p>Click 👇 for preview</p>
         <ul>
-          <li><a href="https://rampanpalia.github.io/FlipkartClone/" target={"_blank"}>Flipkart Clone</a></li>
-          <li><a href="https://rampanpalia.github.io/therailpark.org-Clone/" target={"_blank"}>therailpark.org website Clone</a></li>
-          <li><a href="https://rampanpalia.github.io/StartBootstrapClone/" target={"_blank"}>StartBootstrab Clone</a></li>
-          <li><a href="https://rampanpalia.github.io/PangramPangramClone/" target={"_blank"}>Pangram Pangram Clone</a></li>
-          <li><a href="https://htmlpreview.github.io/?https://github.com/RamPanpalia/DVM_Task1/blob/main/Task2/index.html" target={"_blank"}>Vendor Performance Form</a></li>
-          <p>-This uses regex pattern validation to verify data and local storage to store the data</p>
-          <li><a href="https://rampanpalia.github.io/Resume-Builder/" target={"_blank"}>Resume Builder</a></li>
-          <p>-Made using simple JavaScript this website allows us to create Resumes</p>
-          <li><a href="https://rampanpalia.github.io/sukart/" target={"_blank"}>SUKart</a></li>
-          <p>-SUKart is a e-commerce website made using react and firebase</p>
-          <li><a href="https://rampanpalia.github.io/RagedFingers/" target={"_blank"}>Raged Fingers</a></li>
-          <p>-Raged Fingers is a typical website built to test you typing speed</p>
+          {proj.map((ele) => {
+            return (
+              <li>
+                <a href={ele.link} target={"_blank"} rel="noreferrer">{ele.title}</a>
+                <p>{ele.description !== '' ? '-' : ''}{ele.description}</p>
+              </li>
+            )
+          })}
         </ul>
       </>)
     });
