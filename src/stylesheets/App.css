@@ -176,7 +176,9 @@ a:active {
 .navBar ul {
     display: flex;
     list-style-type: none;
-    margin: 20px 0 15px 0;
+    margin: 20px auto 15px auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .navBar ul li {
@@ -217,7 +219,7 @@ a:active {
     font-size: 22px;
     line-height: 34px;
     height: 60vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: thin;
     background-color: var(--matter-bg);
     color: var(--matter-cl);

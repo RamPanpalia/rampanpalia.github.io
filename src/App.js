@@ -1,7 +1,6 @@
 import './stylesheets/App.css';
 import React, { useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect';
-//Components
 import AboutMe from './components/AboutMe';
 import Skillz from './components/Skillz';
 import ContactMe from './components/ContactMe';
@@ -49,7 +48,7 @@ function App() {
       setNavOn(true);
     }
   }
-  
+
   return (
     <div className={`App ${theme}`}>
       <div className='top'>
@@ -66,7 +65,8 @@ function App() {
             <li className='Experience' onClick={setToExperience}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Experience</a></li>
             <li className='Projects' onClick={setToProjects}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Projects</a></li>
             <li className='Contact' onClick={setToContact}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Contact Me</a></li>
-            <div className='Resume Resume2'>
+          </ul>
+          <div className='Resume Resume2'>
               <div className='checkout'>checkout</div>
               <a href='https://rampanpalia.github.io/Resume/' target={'_blank'} rel="noreferrer"><div className='resLink'>MyResume</div></a>
             </div>
@@ -82,7 +82,6 @@ function App() {
                 <option value={'lite'}>Lose all Colors🙃</option>
               </select>
             </div>
-          </ul>
         </div>
         <div className='flexMain'>
           <div className='flexone'>

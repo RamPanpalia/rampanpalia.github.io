@@ -8,6 +8,8 @@ import { addDoc, collection } from 'firebase/firestore'
 
 const ContactMe = () => {
 
+  const date=new Date()
+
   const [Name, setName] = useState('')
   const [Phone, setPhone] = useState('')
   const [Email, setEmail] = useState('')
@@ -23,7 +25,8 @@ const ContactMe = () => {
       Name: Name,
       Phone: Phone,
       Email: Email,
-      Message: Message
+      Message: Message,
+      time:date.toString(),
     })
       .then(() => {
         alert('Message recieved')
