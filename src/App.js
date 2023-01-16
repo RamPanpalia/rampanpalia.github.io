@@ -10,32 +10,32 @@ import EducationAndCertification from './components/EducationAndCertification'
 
 function App() {
   const [theme, setTheme] = useState('orange')
-  const [ActiveComponent,setActiveComponent]=useState(<AboutMe/>)
+  const [ActiveComponent, setActiveComponent] = useState(<AboutMe />)
   const [navOn, setNavOn] = useState(false);
 
-  const setToAboutme=()=>{
+  const setToAboutme = () => {
     navToggle()
-    setActiveComponent(<AboutMe/>)
+    setActiveComponent(<AboutMe />)
   }
-  const setToSkillZ=()=>{
+  const setToSkillZ = () => {
     navToggle()
-    setActiveComponent(<Skillz/>)
+    setActiveComponent(<Skillz />)
   }
-  const setToEducationAndCertification=()=>{
+  const setToEducationAndCertification = () => {
     navToggle()
-    setActiveComponent(<EducationAndCertification/>)
+    setActiveComponent(<EducationAndCertification />)
   }
-  const setToProjects=()=>{
+  const setToProjects = () => {
     navToggle()
-    setActiveComponent(<Projects/>)
+    setActiveComponent(<Projects />)
   }
-  const setToExperience=()=>{
+  const setToExperience = () => {
     navToggle()
-    setActiveComponent(<Experience/>)
+    setActiveComponent(<Experience />)
   }
-  const setToContact=()=>{
+  const setToContact = () => {
     navToggle()
-    setActiveComponent(<ContactMe/>)
+    setActiveComponent(<ContactMe />)
   }
 
   function navToggle() {
@@ -57,7 +57,7 @@ function App() {
           <div className='bar'></div>
           <div className='bar'></div>
         </div>
-        <div className='navBar'>
+        <div className='navBar navBar-mob'>
           <ul>
             <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li>
             <li className='SkillZ' onClick={setToSkillZ}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">SkillZ</a></li>
@@ -67,21 +67,23 @@ function App() {
             <li className='Contact' onClick={setToContact}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Contact Me</a></li>
           </ul>
           <div className='Resume Resume2'>
-              <div className='checkout'>checkout</div>
-              <a href='https://rampanpalia.github.io/Resume/' target={'_blank'} rel="noreferrer"><div className='resLink'>MyResume</div></a>
-            </div>
-            <div className='changeTheme changeTheme2'>
-              <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
-                <option value={'orange'}>Orange</option>
-                <option value={':root'}>Light Gray Blue</option>
-                <option value={'theme-01'}>Dark Gray Blue</option>
-                <option value={'theme-02'}>Red</option>
-                <option value={'limegreen'}>LimeGreen</option>
-                <option value={'black-white'}>Black & White</option>
-                <option value={'ocean-blue'}>Ocean-Blue</option>
-                <option value={'lite'}>Lose all Colors🙃</option>
-              </select>
-            </div>
+            <div className='checkout'>checkout</div>
+            <a href='https://rampanpalia.github.io/Resume/' target={'_blank'} rel="noreferrer">
+              <div className='resLink'>MyResume</div>
+            </a>
+          </div>
+          <div className='changeTheme changeTheme2'>
+            <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
+              <option value={'orange'}>Orange</option>
+              <option value={':root'}>Light Gray Blue</option>
+              <option value={'theme-01'}>Dark Gray Blue</option>
+              <option value={'theme-02'}>Red</option>
+              <option value={'limegreen'}>LimeGreen</option>
+              <option value={'black-white'}>Black & White</option>
+              <option value={'ocean-blue'}>Ocean-Blue</option>
+              <option value={'lite'}>Lose all Colors🙃</option>
+            </select>
+          </div>
         </div>
         <div className='flexMain'>
           <div className='flexone'>

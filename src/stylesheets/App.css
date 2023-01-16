@@ -300,7 +300,7 @@ a:active {
 .bar {
     height: 4px;
     width: 25px;
-    background-color: black;
+    background-color:  var(--App-cl);
     margin: 4px 0;
 }
 .Resume2,.changeTheme2{
@@ -322,8 +322,21 @@ a:active {
         top: 50px;
         display: none;
     }
+
+    .navBar-mob{
+        display: flex;
+        flex-direction: column;
+    }
+    .navBar-mob>div{
+        padding: 20px;
+    }
+    .navBar-mob ul{
+        padding: 20px;
+        width: auto;
+    }
     .navButton{
         display: block;
+        background-color: var(--dark-bg);
     }
 
     .navBar ul {
