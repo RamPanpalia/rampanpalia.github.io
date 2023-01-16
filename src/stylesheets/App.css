@@ -324,7 +324,7 @@ a:active {
     }
 
     .navBar-mob{
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
     }
     .navBar-mob>div{
