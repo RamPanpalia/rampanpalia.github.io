@@ -51,20 +51,20 @@ const Projects = () => {
 
   ]
 
-  const matter=<>
-  <p>Source Code available on <a href="https://github.com/RamPanpalia"> <u>GitHub</u> </a></p>
-  <p>Click 👇 for preview</p>
-  <ul>
-    {proj.map((ele) => {
-      return (
-        <li>
-          <a href={ele.link} target={"_blank"} rel="noreferrer">{ele.title}</a>
-          <p>{ele.description !== '' ? '-' : ''}{ele.description}</p>
-        </li>
-      )
-    })}
-  </ul>
-</>
+  const matter = <>
+    <p>Source Code available on <a href="https://github.com/RamPanpalia"> <u>GitHub</u> </a></p>
+    <p>Click 👇 for preview</p>
+    <ul>
+      {proj.map((ele) => {
+        return (
+          <li>
+            <a href={ele.link} target={"_blank"} rel="noreferrer">{ele.title}</a>
+            <p>{ele.description !== '' ? '-' : ''}{ele.description}</p>
+          </li>
+        )
+      })}
+    </ul>
+  </>
   return (
     <ComponentTemplate
       title={'Projects'}

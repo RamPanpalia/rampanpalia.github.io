@@ -24,14 +24,14 @@ const Skillz = () => {
     { title: 'GitHub', src: github, },
     { title: 'Python', src: python, },
   ]
-  const matter=<div className='skillsIcons'>
-  {skillz.map(ele=>
-    <img src={ele.src} alt="unable to load!" title={ele.title} />  
-  )}
-</div>
+  const matter = <div className='skillsIcons'>
+    {skillz.map(ele =>
+      <img src={ele.src} alt="unable to load!" title={ele.title} />
+    )}
+  </div>
   return (
     <ComponentTemplate
-      title={'SkillZ'}
+      title={'SkillZ and Tools'}
       matter={matter}
     />
   )

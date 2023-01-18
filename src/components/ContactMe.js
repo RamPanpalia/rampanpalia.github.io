@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -8,7 +8,7 @@ import { addDoc, collection } from 'firebase/firestore'
 
 const ContactMe = () => {
 
-  const date=new Date()
+  const date = new Date()
 
   const [Name, setName] = useState('')
   const [Phone, setPhone] = useState('')
@@ -26,7 +26,7 @@ const ContactMe = () => {
       Phone: Phone,
       Email: Email,
       Message: Message,
-      time:date.toString(),
+      time: date.toString(),
     })
       .then(() => {
         alert('Message recieved')
