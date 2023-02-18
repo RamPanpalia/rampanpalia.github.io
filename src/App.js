@@ -1,4 +1,5 @@
 import './stylesheets/App.css';
+import './stylesheets/fonts.css';
 import React, { useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect';
 import AboutMe from './components/AboutMe';
@@ -39,7 +40,7 @@ function App() {
   }
 
   function navToggle() {
-    if (navOn && window.innerWidth <= 960) {
+    if (navOn && window.innerWidth <= 1250) {
       document.querySelector('.navBar').style.display = "none";
       setNavOn(false);
     }
@@ -58,13 +59,14 @@ function App() {
           <div className='bar'></div>
         </div>
         <div className='navBar navBar-mob'>
+          <span className='myName'>Ram Panpalia</span>
           <ul>
-            <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li>
-            <li className='SkillZ' onClick={setToSkillZ}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">SkillZ</a></li>
-            <li className='EduAExper' onClick={setToEducationAndCertification}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Education and Certifications</a></li>
-            <li className='Experience' onClick={setToExperience}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Experience</a></li>
-            <li className='Projects' onClick={setToProjects}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Projects</a></li>
-            <li className='Contact' onClick={setToContact}><a href={`${navOn && window.innerWidth <= 960 ? '#componentContainer' : '#'}`} rel="noreferrer">Contact Me</a></li>
+            <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li>
+            <li className='SkillZ' onClick={setToSkillZ}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">SkillZ</a></li>
+            <li className='EduAExper' onClick={setToEducationAndCertification}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Education and Certifications</a></li>
+            <li className='Experience' onClick={setToExperience}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Experience</a></li>
+            <li className='Projects' onClick={setToProjects}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Projects</a></li>
+            <li className='Contact' onClick={setToContact}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Contact Me</a></li>
           </ul>
           <div className='Resume Resume2'>
             <div className='checkout'>checkout</div>
@@ -87,7 +89,8 @@ function App() {
         </div>
         <div className='flexMain'>
           <div className='flexone'>
-            <div className='profile-Image'></div>
+            <div className='profile-Image blob'>
+            </div>
             <div className='textEffectBox'>
               <div className='staticText'>Hello, I am</div>
               <ReactTypingEffect

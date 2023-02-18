@@ -32,13 +32,13 @@
 }
 
 .orange {
-    --dark-bg: #1e1e1e;
+    --dark-bg: #000000;
     --App-cl: white;
     --light-bg: #222222;
     --highlight: rgb(255, 136, 0);
     --title-bg: rgb(252, 180, 91);
     --title-cl: black;
-    --matter-bg: #fff4e8;
+    --matter-bg: #ffffff;
     --matter-cl: black;
 }
 
@@ -90,7 +90,8 @@
     height: 107vh;
     width: 100wh;
     font-family: consolas;
-    background-color: var(--dark-bg);
+    /* background-color: var(--dark-bg); */
+    background-color: rgb(92, 92, 92);
     color: var(--App-cl);
 }
 
@@ -122,12 +123,12 @@ a:active {
 }
 
 .profile-Image {
-    background: url('../assets/PP.jpg');
+    background: url('../assets/PP1 - Copy.jpg');
     background-position: center;
     background-size: 265px;
     height: 265px;
     width: 265px;
-    border-radius: 50%;
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
     overflow: hidden;
     margin: auto;
 }
@@ -179,6 +180,7 @@ a:active {
     margin: 20px auto 15px auto;
     width: 100%;
     justify-content: center;
+    position: relative;
 }
 
 .navBar ul li {
@@ -215,7 +217,7 @@ a:active {
 .box-matter {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    padding: 25px;
+    padding: 35px 40px;
     font-size: 22px;
     line-height: 34px;
     height: 60vh;
@@ -288,6 +290,10 @@ a:active {
     margin: auto;
     margin-top: 15px;
 }
+.changeTheme select{
+    padding: 8px 10px;
+    border-radius: 8px;
+}
 
 .navButton {
     position: sticky;
@@ -306,7 +312,7 @@ a:active {
 .Resume2,.changeTheme2{
     display: none;
 }
-@media screen and (max-width:960px) {
+@media screen and (max-width:1250px) {
     .flexone{
         margin: 30px auto;
     }
@@ -317,12 +323,12 @@ a:active {
     .navBar {
         z-index: 1;
         min-height: 100vh;
-        min-width: 100vw;
+        min-width: 100%;
         position: sticky;
         top: 50px;
         display: none;
     }
-
+    
     .navBar-mob{
         /* display: flex; */
         flex-direction: column;

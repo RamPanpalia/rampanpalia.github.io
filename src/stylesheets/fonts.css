@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster&family=Mynerve&family=Pacifico&family=Sassy+Frass&family=Shantell+Sans:wght@300&family=Zeyada&display=swap');
+
+.myName {
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Mynerve', cursive; */
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Sassy Frass', cursive; */
+    /* font-family: 'Shantell Sans', cursive; */
+    /* font-family: 'Zeyada', cursive; */
+    font-size: 32px !important;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.myName:hover{
+    filter: drop-shadow(0px 0px 15px orange);
+}
