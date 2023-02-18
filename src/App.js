@@ -59,7 +59,7 @@ function App() {
           <div className='bar'></div>
         </div>
         <div className='navBar navBar-mob'>
-          <span className='myName'>Ram Panpalia</span>
+          <div className='myName'>Ram Panpalia</div>
           <ul>
             <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li>
             <li className='SkillZ' onClick={setToSkillZ}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">SkillZ</a></li>
