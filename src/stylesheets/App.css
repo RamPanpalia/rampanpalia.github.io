@@ -328,10 +328,11 @@ a:active {
         top: 50px;
         display: none;
     }
-    
+
     .navBar-mob{
         /* display: flex; */
         flex-direction: column;
+        padding: 100px 0;
     }
     .navBar-mob>div{
         padding: 20px;
