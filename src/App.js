@@ -102,7 +102,7 @@ function App() {
                 cursor=''
                 cursorClassName='typingTextCursor'
                 staticText=''
-                text={["Ram Panpalia", "a Hustler", "a Developer", "a Freelancer"]}
+                text={["Ram Panpalia", "a Hustler", "a Developer", "a {pro}Coder"]}
                 displayTextRenderer={(text) => {
                   return (
                     <span className='typingText'>{text}</span>
