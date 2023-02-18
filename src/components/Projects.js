@@ -29,11 +29,6 @@ const Projects = () => {
       description: 'This uses regex pattern validation to verify data and local storage to store the data',
     },
     {
-      title: 'Vendor Performance Form',
-      link: 'https://htmlpreview.github.io/?https://github.com/RamPanpalia/DVM_Task1/blob/main/Task2/index.html',
-      description: 'This uses regex pattern validation to verify data and local storage to store the data',
-    },
-    {
       title: 'Resume Builder',
       link: 'https://rampanpalia.github.io/Resume-Builder/',
       description: 'Made using simple JavaScript this website allows us to create Resumes',
