@@ -10,7 +10,7 @@ import Projects from './components/Projects';
 import EducationAndCertification from './components/EducationAndCertification'
 
 function App() {
-  const [theme, setTheme] = useState('orange')
+  const [theme, setTheme] = useState('lite')
   const [ActiveComponent, setActiveComponent] = useState(<AboutMe />)
   const [navOn, setNavOn] = useState(false);
 
@@ -76,14 +76,14 @@ function App() {
           </div>
           <div className='changeTheme changeTheme2'>
             <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
+              <option value={'lite'}>B&W</option>
               <option value={'orange'}>Orange</option>
               <option value={':root'}>Light Gray Blue</option>
               <option value={'theme-01'}>Dark Gray Blue</option>
               <option value={'theme-02'}>Red</option>
               <option value={'limegreen'}>LimeGreen</option>
-              <option value={'black-white'}>Black & White</option>
+              {/* <option value={'black-white'}>Black & White</option> */}
               <option value={'ocean-blue'}>Ocean-Blue</option>
-              <option value={'lite'}>Lose all Colors🙃</option>
             </select>
           </div>
         </div>
@@ -118,14 +118,14 @@ function App() {
             </div>
             <div className='changeTheme'>
               <select className='themeValue' onChange={(e) => { setTheme(e.target.value) }}>
+                <option value={'lite'}>B&W</option>
                 <option value={'orange'}>Orange</option>
                 <option value={':root'}>Light Gray Blue</option>
                 <option value={'theme-01'}>Dark Gray Blue</option>
                 <option value={'theme-02'}>Red</option>
                 <option value={'limegreen'}>Green</option>
-                <option value={'black-white'}>Black & White</option>
+                {/* <option value={'black-white'}>Black & White</option> */}
                 <option value={'ocean-blue'}>Ocean-Blue</option>
-                <option value={'lite'}>Lose all Colors🙃</option>
               </select>
             </div>
           </div>

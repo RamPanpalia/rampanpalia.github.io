@@ -7,6 +7,8 @@
     --title-cl: black;
     --matter-bg: #e8f6ff;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .theme-01 {
@@ -18,6 +20,8 @@
     --title-cl: black;
     --matter-bg: #5d6a7e;
     --matter-cl: white;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .theme-02 {
@@ -29,6 +33,8 @@
     --title-cl: black;
     --matter-bg: #ffe8e8;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .orange {
@@ -40,6 +46,8 @@
     --title-cl: black;
     --matter-bg: #ffffff;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .black-white {
@@ -51,6 +59,8 @@
     --title-cl: black;
     --matter-bg: #dddddd;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .ocean-blue {
@@ -62,6 +72,8 @@
     --title-cl: black;
     --matter-bg: #e8fdff;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 .limegreen {
     --dark-bg: #26382c;
@@ -72,6 +84,8 @@
     --title-cl: black;
     --matter-bg: #eaffe8;
     --matter-cl: black;
+    --social-media: white;
+    --svg-clr: black;
 }
 
 .lite {
@@ -83,7 +97,8 @@
     --title-cl: white;
     --matter-bg: #ffffff;
     --matter-cl: black;
-
+    --social-media: rgb(47, 47, 47);
+    --svg-clr: rgb(255, 255, 255);
 }
 
 .App {
@@ -236,7 +251,8 @@ a:active {
     left: auto;
     width: 100%;
     padding: 20px 0px 20px 0;
-    background: white;
+    margin-bottom: 20px;
+    background: var(--social-media);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,7 +263,12 @@ a:active {
     margin: 10px;
     height: 35px;
     width: 35px;
+    fill: var(--svg-clr);
     /* box-shadow: 0px 20px 40px red !important; */
+}
+
+.social-media svg:hover{
+    filter: drop-shadow(0px 0px 10px rgba(96, 96, 96, 0.3));
 }
 
 .facebook:hover {
