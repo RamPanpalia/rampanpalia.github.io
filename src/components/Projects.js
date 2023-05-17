@@ -4,6 +4,11 @@ import ComponentTemplate from './ComponentTemplate'
 const Projects = () => {
   const proj = [
     {
+      title: 'My Portfolio Website',
+      link: 'https://rampanpalia.github.io/',
+      description: 'website you are currently on. Made using ReactJs',
+    },
+    {
       title: 'Flipkart Clone',
       link: 'https://rampanpalia.github.io/FlipkartClone/',
       description: '',
@@ -36,12 +41,17 @@ const Projects = () => {
     {
       title: 'SUKart',
       link: 'https://rampanpalia.github.io/sukart/',
-      description: 'SUKart is a e-commerce website made using react and firebase',
+      description: 'a e-commerce website made using react and firebase',
     },
     {
       title: 'Raged Fingers',
       link: 'https://rampanpalia.github.io/RagedFingers/',
-      description: 'Raged Fingers is a typical website built to test you typing speed',
+      description: 'a typical website built to test you typing speed',
+    },
+    {
+      title: 'Economics and Finance Association website',
+      link: 'https://main--sweet-cranachan-f2df5f.netlify.app/',
+      description: 'made in ReactJs',
     },
 
   ]
