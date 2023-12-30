@@ -11,7 +11,7 @@ import EducationAndCertification from './components/EducationAndCertification'
 
 function App() {
   const [theme, setTheme] = useState('lite')
-  const [ActiveComponent, setActiveComponent] = useState(<AboutMe />)
+  const [ActiveComponent, setActiveComponent] = useState(<Skillz />)
   const [navOn, setNavOn] = useState(false);
 
   const setToAboutme = () => {
@@ -61,7 +61,7 @@ function App() {
         <div className='navBar navBar-mob'>
           <div className='myName'>Ram Panpalia</div>
           <ul>
-            <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li>
+            {/* <li className='About' onClick={setToAboutme}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">About Me</a></li> */}
             <li className='SkillZ' onClick={setToSkillZ}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">SkillZ</a></li>
             <li className='EduAExper' onClick={setToEducationAndCertification}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Education and Certifications</a></li>
             <li className='Experience' onClick={setToExperience}><a href={`${navOn && window.innerWidth <= 1250 ? '#componentContainer' : '#'}`} rel="noreferrer">Experience</a></li>
@@ -102,7 +102,7 @@ function App() {
                 cursor=''
                 cursorClassName='typingTextCursor'
                 staticText=''
-                text={["Ram Panpalia", "a Hustler", "a Developer", "a {pro}Coder"]}
+                text={["Ram Panpalia", "a Hustler", "a Developer", "a Programmer"]}
                 displayTextRenderer={(text) => {
                   return (
                     <span className='typingText'>{text}</span>
