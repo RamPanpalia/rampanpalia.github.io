@@ -1,0 +1,6 @@
+node_modules
+dist
+# personal — contains phone number
+Ram_Panpalia_Resume_5.pdf
+.DS_Store
+*.local
