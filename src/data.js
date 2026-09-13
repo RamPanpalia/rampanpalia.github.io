@@ -177,12 +177,6 @@ export const achievements = [
   { label: "MHT-CET", value: "Top 1%", detail: "of 5.5 lakh candidates" },
 ];
 
-export const writing = [
-  { title: "Killing a race condition with Redis locks", status: "Draft" },
-  { title: "Lambda vs. a long-running service: a cold-start story", status: "Draft" },
-  { title: "Shipping RAG in production — notes from Cviere", status: "Draft" },
-];
-
 export const contact = {
   heading: "Say hello",
   body: "I'm always up for a conversation about backend work, distributed systems, or something you're building. Email is the fastest way to reach me, and I read everything.",
