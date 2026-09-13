@@ -4,20 +4,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#0B0F14",
-        card: "#131A22",
-        accent: "#3B82F6",
-        success: "#22C55E",
-        ink: "#F8FAFC",
-        muted: "#94A3B8",
-        line: "#1E293B",
+        // Warm paper palette. Every value is also mirrored as a CSS variable
+        // in index.css so dark mode is a single token swap.
+        paper: "rgb(var(--paper) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        faint: "rgb(var(--faint) / <alpha-value>)",
+        line: "rgb(var(--line) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ["Geist", "IBM Plex Sans", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        display: ["Fraunces", "Iowan Old Style", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       maxWidth: {
-        content: "72rem",
+        prose: "44rem",
       },
     },
   },
